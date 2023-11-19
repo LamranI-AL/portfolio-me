@@ -2,26 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  width: 100%;
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  padding-inline: 2px;
+}
+.flexreverse {
+  @apply flex gap-7 flex-col lg:flex-row lg:gap-40 items-center justify-center;
+}
+.footer {
+  @apply bottom-0;
+}
+
+.card {
+  @apply border-[0.5px] border-zinc-100 rounded-lg p-6;
+}
+
+.cardButton {
+  @apply font-medium border-[0.5px] border-zinc-100 rounded-lg p-4;
+}
+.resize {
+  @apply h-[250px] w-[333px]  xs:h-[300px] xs:w-[400px];
+}
+
+.button {
+  @apply border-[0.5px] border-zinc-100 w-full text-white p-3 bg-black font-bold rounded-lg sm:w-[500px];
+}
+.inputText {
+  @apply p-3 w-full bg-transparent border-[1px] border-white text-base sm:w-[500px];
 }
