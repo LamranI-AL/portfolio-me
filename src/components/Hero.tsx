@@ -12,7 +12,7 @@ const buttonVariants = {
 
 const Hero = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-16 min-h-[60vh]">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-16 min-h-[60vh] h-full py-10">
       <motion.div
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.005, transition: { duration: 0.3 } }}
