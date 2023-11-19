@@ -15,7 +15,7 @@ const act = [
     name: "IEEE",
     link: "https://www.instagram.com/ieee_ensaf/",
 
-    pic: <Image src={"/IEEE.png"} alt="ieee" width={400} height={400} />,
+    pic: <Image src={"/IEEE.png"} alt="ieee" width={300} height={300} />,
   },
 ];
 
@@ -25,7 +25,7 @@ const Activities = () => {
       <h1 className="font-bold text-6xl">Activities</h1>
       <div className="flex flex-wrap  justify-center  gap-16">
         {act.map((ac) => (
-          <div className="flex flex-col gap-5 items-center">
+          <div key={ac.name} className="flex flex-col gap-5 items-center">
             <h1 className="text-4xl">
               {ac.post} at {ac.name}
             </h1>
