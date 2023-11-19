@@ -2,11 +2,12 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 const Nav = () => {
   return (
     <div className="flex max-w-5xl pt-4 justify-between px-6 items-center top-0 h-[80px] m-auto">
-      <h1 className="font-bold text-xl">AB</h1>
+      <Image src={"/mylogo.png"} width={40} height={40} alt="ab" />
       <div className="flex gap-2">
         <a
           href="https://ma.linkedin.com/in/ayoub-bensalah-56834b29b"
