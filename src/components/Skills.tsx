@@ -84,18 +84,35 @@ const Skills = () => {
   const elementVariants = {
     hover: {
       scale: 1.05,
-      // Increase scale by 1.05 on hover
     },
   };
+
   return (
     <div className="min-h-[60vh] h-full py-11 flex flex-col items-center justify-center gap-11">
-      <h1 className="font-bold text-6xl">Skills</h1>
-      <div className="flex flex-wrap items-center justify-center gap-12 px-9">
+      <motion.h1
+        className="font-bold text-6xl"
+        viewport={{ once: true }}
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 1 },
+        }}
+      >
+        Skills
+      </motion.h1>
+      <motion.div className="flex flex-wrap items-center justify-center gap-12 px-9">
         <motion.div
-          initial={{ scale: 1 }}
+          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20, scale: 1 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, delay: 0.3 },
+          }}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.2 }}
-          className="card h-[350px] flex flex-col items-center  gap-7 w-max"
+          className="card h-[350px] w-[226px] flex flex-col items-center  gap-7"
         >
           <h1 className="font-bold text-3xl">Front End</h1>
           <div className="flex flex-col gap-2">
@@ -113,10 +130,16 @@ const Skills = () => {
           </div>
         </motion.div>
         <motion.div
-          initial={{ scale: 1 }}
+          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20, scale: 1 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, delay: 0.6 },
+          }}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.2 }}
-          className="card h-[350px] flex flex-col items-center gap-7 w-max"
+          className="card h-[350px] flex flex-col items-center gap-7 w-[226px]"
         >
           <h1 className="font-bold text-3xl">Back End</h1>
           <div className="flex flex-col gap-2">
@@ -134,10 +157,16 @@ const Skills = () => {
           </div>
         </motion.div>
         <motion.div
-          initial={{ scale: 1 }}
+          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20, scale: 1 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, delay: 0.9 },
+          }}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.2 }}
-          className="card h-[350px] flex flex-col items-center gap-7 w-max"
+          className="card h-[350px] flex flex-col items-center gap-7 w-[226px]"
         >
           <h1 className="font-bold text-3xl">Visual</h1>
           <div className="flex flex-col gap-2 ">
@@ -155,10 +184,16 @@ const Skills = () => {
           </div>
         </motion.div>
         <motion.div
-          initial={{ scale: 1 }}
+          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20, scale: 1 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, delay: 1.2 },
+          }}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.2 }}
-          className="card h-[350px]  flex flex-col items-center gap-4 w-max"
+          className="card h-[350px]  flex flex-col items-center gap-4 w-[226px]"
         >
           <h1 className="font-bold text-3xl">Data science</h1>
           <div className="flex flex-col gap-2">
@@ -175,7 +210,7 @@ const Skills = () => {
             ))}{" "}
           </div>
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 };

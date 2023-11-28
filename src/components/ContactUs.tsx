@@ -58,10 +58,22 @@ const ContactUs = () => {
 
   return (
     <div className=" flexreverse min-h-[60vh] h-full justify-center gap-20 items-center py-40  ">
-      <motion.h1 className="text-[70px] sm:text-[100px] text-center max-w-md text-white font-base leading-[120px] pb-20 px-5 sm:px-0">
+      <motion.h1
+        viewport={{ once: true }}
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1 },
+        }}
+        className="text-[70px] sm:text-[100px] text-center max-w-md text-white font-base leading-[120px] pb-20 px-5 sm:px-0"
+      >
         Let's Get in touch !
       </motion.h1>
       <motion.form
+        viewport={{ once: true }}
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
         onSubmit={handleSubmit}
         className="flex flex-col gap-4 items-center"
       >

@@ -20,12 +20,41 @@ const act = [
 ];
 
 const Activities = () => {
+  const variants = {
+    initial: { opacity: 0, y: 20 },
+    inView: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, staggerChildren: 0.4 },
+    },
+  };
   return (
     <div className="min-h-full py-12 flex flex-col items-center gap-12 justify-center">
-      <h1 className="font-bold text-6xl">Activities</h1>
-      <div className="flex flex-wrap  justify-center  gap-16">
+      <motion.h1
+        className="font-bold text-6xl"
+        viewport={{ once: true }}
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 1 },
+        }}
+      >
+        Activities
+      </motion.h1>
+      <motion.div
+        viewport={{ once: true }}
+        initial="initial"
+        variants={variants}
+        whileInView="inView"
+        className="flex flex-wrap  justify-center  gap-16"
+      >
         {act.map((ac) => (
-          <div key={ac.name} className="flex flex-col gap-5 items-center">
+          <motion.div
+            variants={variants}
+            key={ac.name}
+            className="flex flex-col gap-5 items-center"
+          >
             <h1 className="text-4xl">
               {ac.post} at {ac.name}
             </h1>
@@ -36,9 +65,9 @@ const Activities = () => {
             >
               {ac.pic}
             </motion.a>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

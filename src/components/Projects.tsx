@@ -2,13 +2,6 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const buttonVariants = {
-  hover: {
-    backgroundColor: "#ffffff",
-    color: "#000000",
-  },
-};
-
 const Projects = () => {
   const [isHovering, setIsHovering] = useState(false);
   const [isHovering1, setIsHovering1] = useState(false);
@@ -23,15 +16,43 @@ const Projects = () => {
       controls.start({ opacity: 0 });
     }
   }, [isHovering, controls]);
-
+  const variants = {
+    initial: { opacity: 0, y: 20 },
+    inView: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, staggerChildren: 0.4 },
+    },
+  };
   return (
     <div className="min-h-[70vh] h-full pt-9 flex flex-col items-center gap-12 justify-center">
-      <h1 className="font-bold text-6xl">Projects</h1>
-      <div className="flex flex-wrap gap-7 items-center justify-center">
-        <a href="https://infochain.site/" target="_blank">
+      <motion.h1
+        viewport={{ once: true }}
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 1 },
+        }}
+        className="font-bold text-6xl"
+      >
+        Projects
+      </motion.h1>
+      <motion.div
+        viewport={{ once: true }}
+        initial="initial"
+        variants={variants}
+        whileInView="inView"
+        className="flex flex-wrap gap-7 items-center justify-center"
+      >
+        <motion.a
+          variants={variants}
+          href="https://infochain.site/"
+          target="_blank"
+        >
           <div>
             <motion.div
-              className="resize overflow-hidden relative rounded-3xl"
+              className="w-[420px] h-[310px] overflow-hidden relative rounded-3xl"
               onHoverStart={() => setIsHovering(true)}
               onHoverEnd={() => setIsHovering(false)}
               whileHover={{ opacity: 1 }}
@@ -49,11 +70,15 @@ const Projects = () => {
               </div>
             </motion.div>
           </div>
-        </a>
-        <a href="https://devbreak-demo.vercel.app/" target="_blank">
+        </motion.a>
+        <motion.a
+          variants={variants}
+          href="https://devbreak-demo.vercel.app/"
+          target="_blank"
+        >
           <div>
             <motion.div
-              className="resize overflow-hidden relative rounded-3xl"
+              className="w-[420px] h-[310px] overflow-hidden relative rounded-3xl"
               onHoverStart={() => setIsHovering1(true)}
               onHoverEnd={() => setIsHovering1(false)}
               whileHover={{ opacity: 1 }}
@@ -71,11 +96,15 @@ const Projects = () => {
               </div>
             </motion.div>
           </div>
-        </a>
-        <a href="https://catagames.vercel.app/" target="_blank">
+        </motion.a>
+        <motion.a
+          variants={variants}
+          href="https://catagames.vercel.app/"
+          target="_blank"
+        >
           <div>
             <motion.div
-              className="resize overflow-hidden relative rounded-3xl"
+              className="w-[420px] h-[310px] overflow-hidden relative rounded-3xl"
               onHoverStart={() => setIsHovering2(true)}
               onHoverEnd={() => setIsHovering2(false)}
               whileHover={{ opacity: 1 }}
@@ -93,8 +122,8 @@ const Projects = () => {
               </div>
             </motion.div>
           </div>
-        </a>
-      </div>
+        </motion.a>
+      </motion.div>
     </div>
   );
 };

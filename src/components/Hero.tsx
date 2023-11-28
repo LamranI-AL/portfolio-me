@@ -14,8 +14,13 @@ const Hero = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-16 min-h-[60vh] h-full py-10">
       <motion.div
-        initial={{ scale: 1 }}
-        whileHover={{ scale: 1.005, transition: { duration: 0.3 } }}
+        viewport={{ once: true }}
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1 },
+        }}
         className="h-[250px] w-[250px] xs:h-[350px]  xs:w-[350px]"
       >
         <img
@@ -24,7 +29,12 @@ const Hero = () => {
           alt="Ayoub Bensalah"
         />
       </motion.div>
-      <motion.div className="flex flex-col gap-6 text-gray-200 text-xl">
+      <motion.div
+        viewport={{ once: true }}
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+        className="flex flex-col gap-6 text-gray-200 text-xl"
+      >
         <h1 className="font-bold text-5xl text-white">Ayoub Bensalah</h1>
         <h2>Full-Stack developer</h2>
         <h2>Graphic Designer | Video editor</h2>
