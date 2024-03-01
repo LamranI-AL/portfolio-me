@@ -16,14 +16,13 @@ const About = () => {
           transition: { duration: 1, delay: 0.5 },
         }}
       >
-        <p className="text-2xl">
-          Hello! My name is Ayoub Bensalah I'm a computer science engineering
-          student from Morocco , I do multiple stuff like Web developement App
-          developement , Data Science , Video editing and visual effects ,
-          Competetive programming , I'm also engaged in many university
-          activities , I do martial arts and bodybuilding , I like to read about
-          history and religion , If you wanna know more about me please Scroll
-          down
+        <p className="text-xl">
+          As a student engineer, president of the Quark club, and former vice
+          president of the Industry 4.0 club, I'm passionate about innovation
+          and industrial digital transformation. Leveraging my skills as a web
+          developer, I strive to create efficient digital solutions. My goal is
+          to shape a smarter, more connected industrial future through the
+          adoption of advanced technologies.
         </p>
       </motion.div>
       <motion.div
@@ -36,10 +35,10 @@ const About = () => {
         }}
       >
         <Image
-          src={"/me.jpg"}
-          width={400}
-          height={400}
-          alt="Ayoub"
+          src={"/IMG_20221203_220753.jpg"}
+          width={300}
+          height={"300"}
+          alt="othmane"
           className="rounded-3xl"
         />
       </motion.div>

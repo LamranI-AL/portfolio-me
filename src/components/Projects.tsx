@@ -47,7 +47,7 @@ const Projects = () => {
       >
         <motion.a
           variants={variants}
-          href="https://infochain.site/"
+          // href="https://infochain.site/"
           target="_blank"
         >
           <div>
@@ -58,7 +58,7 @@ const Projects = () => {
               whileHover={{ opacity: 1 }}
             >
               <img
-                src="/infochain.png"
+                src="/Screenshot 2024-03-01 171212.png"
                 className="h-full absolute w-full object-cover"
                 style={{
                   opacity: isHovering ? 0.1 : 1,
@@ -66,14 +66,14 @@ const Projects = () => {
                 }}
               />
               <div className="h-full w-full flex flex-col items-center justify-center gap-10">
-                <h1 className="font-semibold text-4xl">InfoChain</h1>
+                <h1 className="font-semibold text-4xl">Quark</h1>
               </div>
             </motion.div>
           </div>
         </motion.a>
         <motion.a
           variants={variants}
-          href="https://devbreak-demo.vercel.app/"
+          // href="https://devbreak-demo.vercel.app/"
           target="_blank"
         >
           <div>
@@ -92,14 +92,14 @@ const Projects = () => {
                 }}
               />
               <div className="h-full w-full flex flex-col items-center justify-center gap-10">
-                <h1 className="font-semibold text-4xl">DevBreak</h1>
+                <h1 className="font-semibold text-4xl">Portfolio</h1>
               </div>
             </motion.div>
           </div>
         </motion.a>
         <motion.a
           variants={variants}
-          href="https://catagames.vercel.app/"
+          // href="https://catagames.vercel.app/"
           target="_blank"
         >
           <div>

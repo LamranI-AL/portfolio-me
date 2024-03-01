@@ -2,20 +2,27 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+// import Logo from "../../public/V.png";
 
 const act = [
   {
     post: "President",
-    name: "InfoChain",
-    link: "https://www.instagram.com/info_chain_ensaf/",
-    pic: <Image src={"/chain.png"} alt="infochain" width={150} height={150} />,
+    name: "Quark",
+    link: "https://www.linkedin.com/company/quark-ensabm",
+    pic: <Image src={"/logo.png"} alt="Quark" width={150} height={150} />,
   },
   {
-    post: "Design Manager",
-    name: "IEEE",
-    link: "https://www.instagram.com/ieee_ensaf/",
-
-    pic: <Image src={"/IEEE.png"} alt="ieee" width={300} height={300} />,
+    post: "vice-president",
+    name: "industrie4.0",
+    link: "https://www.linkedin.com/company/transformation-digitale-industrielle",
+    pic: (
+      <Image
+        src={"/indus-removebg-preview.png"}
+        alt="ieee"
+        width={150}
+        height={150}
+      />
+    ),
   },
 ];
 
@@ -55,7 +62,7 @@ const Activities = () => {
             key={ac.name}
             className="flex flex-col gap-5 items-center"
           >
-            <h1 className="text-4xl">
+            <h1 className="text-3xl">
               {ac.post} at {ac.name}
             </h1>
             <motion.a

@@ -24,9 +24,9 @@ const Hero = () => {
         className="h-[250px] w-[250px] xs:h-[350px]  xs:w-[350px]"
       >
         <img
-          src="/ayoub.png"
-          className="object-cover h-full w-full"
-          alt="Ayoub Bensalah"
+          src="/me.jpeg"
+          className="object-cover h-full w-full rounded-3xl"
+          alt="othmane lamrani"
         />
       </motion.div>
       <motion.div
@@ -35,10 +35,12 @@ const Hero = () => {
         whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
         className="flex flex-col gap-6 text-gray-200 text-xl"
       >
-        <h1 className="font-bold text-5xl text-white">Ayoub Bensalah</h1>
-        <h2>Full-Stack developer</h2>
-        <h2>Graphic Designer | Video editor</h2>
-        <h2>Data Science enthusiast</h2>
+        <h1 className="font-bold text-5xl text-white">
+          Othmane lamrani alaoui
+        </h1>
+        <h2>Developer</h2>
+        <h2>Web developer | Digitalisation</h2>
+        <h2>Future Engineer in Industrial Digital Transformation.</h2>
         <div className="flex gap-3 items-center justify-center">
           <Link to="about" smooth={true} duration={500}>
             <motion.button

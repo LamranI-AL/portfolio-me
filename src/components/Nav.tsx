@@ -1,27 +1,32 @@
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
 import { FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 
 const Nav = () => {
   return (
     <div className="flex max-w-5xl pt-4 justify-between px-6 items-center top-0 h-[80px] m-auto">
-      <Image src={"/mylogo.png"} width={40} height={40} alt="ab" />
+      <Image
+        src={"/me2.jpeg"}
+        className="rounded-3xl"
+        width={40}
+        height={40}
+        alt="ME"
+      />
       <div className="flex gap-2">
         <a
-          href="https://ma.linkedin.com/in/ayoub-bensalah-56834b29b"
+          href="https://www.linkedin.com/in/othmane-lamrani-alaoui-59193b247"
           target="_blank"
         >
           <FaLinkedin size={25} />
         </a>
-        <a href="https://github.com/ayoubben18" target="_blank">
+        <a href="https://github.com/LamranI-AL" target="_blank">
           <FaGithub size={25} />
         </a>
-        <a href="https://leetcode.com/user0898tU/" target="_blank">
-          <SiLeetcode size={25} />
-        </a>
-        <a href="https://www.instagram.com/_takamura._/" target="_blank">
+        <a
+          href="https://www.instagram.com/othman__la?igsh=MXhsN3ZzZG9iNHF3ZQ=="
+          target="_blank"
+        >
           <FaInstagram size={25} />
         </a>
       </div>

@@ -1,21 +1,19 @@
 "use client";
 import React from "react";
-import { FaReact, FaPython } from "react-icons/fa";
-import { TbBrandNextjs, TbSql, TbBrandSocketIo } from "react-icons/tb";
+import { FaReact, FaNode, FaJava } from "react-icons/fa";
+import { TbBrandNextjs, TbSql } from "react-icons/tb";
 import { FiFramer } from "react-icons/fi";
 import {
   SiTailwindcss,
-  SiRedux,
   SiMongoose,
-  SiPrisma,
   SiExpress,
-  SiAdobeaftereffects,
-  SiAdobephotoshop,
-  SiAdobepremierepro,
   SiNumpy,
-  SiPandas,
   SiTypescript,
   SiJavascript,
+  SiFirebase,
+  SiAntdesign,
+  SiChakraui,
+  SiSemanticuireact,
 } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 import { GiWebSpit } from "react-icons/gi";
@@ -37,28 +35,25 @@ const icons = {
   ],
   backend: [
     { name: "JavaScript", icon: <SiJavascript size={size} color="#f7df1e" /> },
-
-    {
-      name: "Socket.IO",
-      icon: <TbBrandSocketIo size={size} color="#fff" />,
-    },
+    { name: "Node.js", icon: <FaNode size={size * 0.9} color="#3d8" /> },
+    { name: "java", icon: <FaJava size={size / 1.4} color="#f7df1e" /> },
     { name: "Express", icon: <SiExpress size={size} color="white" /> },
     { name: "Mongoose", icon: <SiMongoose size={size} color="red" /> },
-    { name: "Prisma", icon: <SiPrisma size={size} color="#1b222d" /> },
+    { name: "Firebase ", icon: <SiFirebase size={size} color="#1b222d" /> },
     { name: "MongoDB", icon: <DiMongodb size={size} color="#4db33d" /> },
   ],
   visual: [
     {
-      name: "After Effects",
-      icon: <SiAdobeaftereffects size={size} color="#d291ff" />,
+      name: "Ain design",
+      icon: <SiAntdesign size={size} color="#d291ff" />,
     },
     {
-      name: "Photoshop",
-      icon: <SiAdobephotoshop size={size} color="#31a8ff" />,
+      name: "Chakra",
+      icon: <SiChakraui size={size} color="#31a8ff" />,
     },
     {
-      name: "Premiere Pro",
-      icon: <SiAdobepremierepro size={size} color="#ea77ff" />,
+      name: "Semantic ",
+      icon: <SiSemanticuireact size={size} color="#ea77ff" />,
     },
   ],
   datascience: [
@@ -68,15 +63,6 @@ const icons = {
     },
     { name: "SQL", icon: <TbSql size={size} color="#003366" /> },
     { name: "NumPy", icon: <SiNumpy size={size} color="#013243" /> },
-    { name: "Pandas", icon: <SiPandas size={size} color="#150458" /> },
-    {
-      name: "scikitlearn",
-      icon: <Image alt="python" width={size} height={size} src="/sci.png" />,
-    },
-    {
-      name: "Seaborn",
-      icon: <Image alt="python" width={size} height={size} src="/seab.png" />,
-    },
     { name: "Web Scraping", icon: <GiWebSpit size={size} color="#ffcc00" /> },
   ],
 };

@@ -68,7 +68,7 @@ const ContactUs = () => {
         }}
         className="text-[70px] sm:text-[100px] text-center max-w-md text-white font-base leading-[120px] pb-20 px-5 sm:px-0"
       >
-        Let's Get in touch !
+        Let's Contact Othmane!
       </motion.h1>
       <motion.form
         viewport={{ once: true }}

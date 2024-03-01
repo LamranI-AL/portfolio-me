@@ -5,21 +5,21 @@ import { SiLeetcode } from "react-icons/si";
 const Footer = () => {
   return (
     <div className="flex justify-between p-3 bg-slate-950">
-      <h1>@AyoubBensalah Portfolio 2023</h1>
+      <h1>@othmane lamrani alaoui Portfolio 2024</h1>
       <div className="flex gap-2">
         <a
-          href="https://ma.linkedin.com/in/ayoub-bensalah-56834b29b"
+          href="https://www.linkedin.com/in/othmane-lamrani-alaoui-59193b247"
           target="_blank"
         >
           <FaLinkedin size={20} />
         </a>
-        <a href="https://github.com/ayoubben18" target="_blank">
+        <a href="https://github.com/LamranI-AL" target="_blank">
           <FaGithub size={20} />
         </a>
-        <a href="https://leetcode.com/user0898tU/" target="_blank">
-          <SiLeetcode size={20} />
-        </a>
-        <a href="https://www.instagram.com/_takamura._/" target="_blank">
+        <a
+          href="https://www.instagram.com/othman__la?igsh=MXhsN3ZzZG9iNHF3ZQ=="
+          target="_blank"
+        >
           <FaInstagram size={25} />
         </a>
       </div>

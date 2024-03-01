@@ -7,8 +7,8 @@ import Footer from "@/components/Footer";
 const inter = Ubuntu({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  title: "Ayoub Bensalah",
-  description: "Ayoub bensalah portfolio",
+  title: "Othmane lamrani alaoui",
+  description: "Othmane lamrani alaoui portfolio",
 };
 
 export default function RootLayout({
