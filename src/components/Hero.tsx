@@ -38,7 +38,7 @@ const Hero = () => {
         <h1 className="font-bold text-5xl text-white">
           Othmane lamrani alaoui
         </h1>
-        <h2>Developer</h2>
+        {/* <h2>Developer</h2> */}
         <h2>Web developer | Digitalisation</h2>
         <h2>Future Engineer in Industrial Digital Transformation.</h2>
         <div className="flex gap-3 items-center justify-center">
