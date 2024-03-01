@@ -1,27 +1,27 @@
 "use client";
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
-async function sendEmail(Email: string, Name: string, Message: string) {
-  emailjs.init("38pRZqGDERExWAAqD");
+// async function sendEmail(Email: string, Name: string, Message: string) {
+//   emailjs.init("38pRZqGDERExWAAqD");
 
-  try {
-    const response = await emailjs.send(
-      "service_q1uhaw2",
-      "template_3h1j4qy",
-      {
-        name: Name,
-        message: Message,
-        sender: Email,
-      },
-      "38pRZqGDERExWAAqD"
-    );
-    console.log("Email sent successfully:", response);
-  } catch (error) {
-    console.error("Error sending email:", error);
-  }
-}
+//   try {
+//     const response = await emailjs.send(
+//       "service_q1uhaw2",
+//       "template_3h1j4qy",
+//       {
+//         name: Name,
+//         message: Message,
+//         sender: Email,
+//       },
+//       "38pRZqGDERExWAAqD"
+//     );
+//     console.log("Email sent successfully:", response);
+//   } catch (error) {
+//     console.error("Error sending email:", error);
+//   }
+// }
 
 const ContactUs = () => {
   const [message, setMessage] = useState<string>("");
@@ -45,9 +45,7 @@ const ContactUs = () => {
     setIsSending(true); // Set isSending to true when sending email
 
     try {
-      await sendEmail(Email, Name, Message);
-
-      // Reset the form fields after a successful submission
+      // await sendEmail(Email, Name, Message);
       resetForm();
     } catch (err: any) {
       console.log(err);
