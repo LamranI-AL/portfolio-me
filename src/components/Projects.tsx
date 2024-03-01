@@ -84,7 +84,7 @@ const Projects = () => {
               whileHover={{ opacity: 1 }}
             >
               <img
-                src="/dev.png"
+                src="/prtfolio.png"
                 className="h-full absolute w-full object-cover"
                 style={{
                   opacity: isHovering1 ? 0.1 : 1,
